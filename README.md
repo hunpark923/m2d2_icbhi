@@ -124,8 +124,7 @@ python -m scripts.train_classifier \
 The M2D2-pretrained BEATs encoder checkpoint used to produce the results
 in the paper is released as a separate file.
 
-> **Download:** *<insert Zenodo / Hugging Face / Google Drive URL here
-> after upload>*
+> **Download:** https://drive.google.com/file/d/10gjeopmA7VhP1f2bWhfbtNBlgp3cXvf8/view?usp=sharing
 >
 > **SHA-256:** *<fill in after upload>*
 >
