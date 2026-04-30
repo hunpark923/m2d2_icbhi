@@ -146,7 +146,7 @@ cite our paper:
 @article{park2026m2d2,
   title   = {Diffusion-augmented self-supervised learning for respiratory
              sound classification on the ICBHI benchmark},
-  author  = {Park, Chan Hun and Lee, Jung Chan},
+  author  = {Chan Hun Park and Jung Chan Lee},
   journal = {Biomedical Signal Processing and Control},
   year    = {2026},
   note    = {Under review}
