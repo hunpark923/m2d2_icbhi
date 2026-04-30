@@ -126,8 +126,6 @@ in the paper is released as a separate file.
 
 > **Download:** https://drive.google.com/file/d/10gjeopmA7VhP1f2bWhfbtNBlgp3cXvf8/view?usp=sharing
 >
-> **SHA-256:** *<fill in after upload>*
->
 > **License:** Same MIT license as the code (see `LICENSE`).
 > Note that the BEATs base weights themselves are governed by their
 > upstream license; the released checkpoint contains BEATs weights
