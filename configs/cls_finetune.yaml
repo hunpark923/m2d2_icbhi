@@ -1,0 +1,59 @@
+# Attention-MIL classifier defaults.
+# These match the configuration used to produce the reported results.
+
+preproc:
+  data_dir: ./data/ICBHI_final_database
+  official_split_file: ./splits/official_split.txt
+  sample_rate: 16000
+  desired_length_sec: 8.0
+  fade_samples_ratio: 16
+  pad_types: repeat
+  train_time_shift_sec: 0.20
+  target_rms: 0.05
+  norm_min_scale: 0.2
+  norm_max_scale: 5.0
+  clamp_amp: 1.0
+  seg_sec: 2.0
+  n_instances: 7
+  instance_step_sec: 1.0
+  cache_dir: ./cache_cycles
+  use_cache: true
+
+cls:
+  beats_checkpoint_path: ./checkpoints/BEATs_iter3_plus_AS2M.pt
+  device: cuda
+  seed: 42
+  split_seed: 42
+
+  num_classes: 4
+  sample_rate: 16000
+
+  batch_size: 8
+  accumulation_steps: 4
+  epochs: 100
+  lr: 2.0e-5
+  weight_decay: 0.01
+  min_lr: 1.0e-6
+  use_amp: true
+  grad_clip: 1.0
+  patience: 10
+
+  focal_gamma: 1.5
+  label_smoothing: 0.05
+  sampler_power: 0.5
+
+  val_ratio: 0.20
+  eval_shift_secs: [-0.35, -0.20, -0.10, 0.0, 0.10, 0.20, 0.35]
+  eval_pad_sec: 0.0
+
+  threshold_steps: 91
+  threshold_min: 0.05
+  threshold_max: 0.95
+  selection_metric: gs_then_pm
+
+  dropout: 0.0
+  num_workers: 0
+  pin_memory: true
+
+  save_root: ./runs/cls
+  run_name: attention_mil

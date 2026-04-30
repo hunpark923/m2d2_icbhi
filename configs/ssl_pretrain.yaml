@@ -1,0 +1,71 @@
+# M2D2 self-supervised pretraining defaults.
+# These match the configuration used to produce the reported results.
+
+preproc:
+  data_dir: ./data/ICBHI_final_database
+  official_split_file: ./splits/official_split.txt
+  sample_rate: 16000
+  desired_length_sec: 8.0
+  fade_samples_ratio: 16
+  pad_types: repeat
+  train_time_shift_sec: 0.20
+  target_rms: 0.05
+  norm_min_scale: 0.2
+  norm_max_scale: 5.0
+  clamp_amp: 1.0
+  seg_sec: 2.0
+  n_instances: 7
+  instance_step_sec: 1.0
+  cache_dir: ./cache_cycles
+  use_cache: true
+
+ssl:
+  beats_checkpoint_path: ./checkpoints/BEATs_iter3_plus_AS2M.pt
+  device: cuda
+  seed: 42
+
+  # optimisation
+  lr: 2.0e-4
+  batch_size: 64
+  accumulation_steps: 2
+  pretrain_epochs: 300
+  warmup_epochs: 20
+
+  # SSL input
+  ssl_input_sec: 2.0
+  bg_noise_dir: ./data/FSD50K
+  bg_eta: 0.3
+  bg_prob: 1.0
+
+  # masking + predictor
+  mask_ratio: 0.6
+  predictor_depth: 8
+  predictor_num_heads: 8
+  predictor_mlp_ratio: 4.0
+
+  # diffusion
+  diffusion_timesteps: 1000
+  ssl_noise_t_end: 80
+  ssl_noise_curriculum_epochs: 300
+
+  # mountain-schedule fractions (must sum to 1.0)
+  mountain_warmup_frac: 0.10
+  mountain_ramp_frac: 0.20
+  mountain_plateau_frac: 0.50
+  mountain_cooldown_frac: 0.20
+
+  # corruption probabilities
+  ssl_diff_prob: 0.5
+  ssl_diff_vis_ratio: 0.25
+
+  # bookkeeping
+  save_eval_every: 25
+  save_root: ./runs/ssl
+  run_name: m2d2
+
+  # periodic linear-probe (monitoring)
+  lin_epochs: 100
+  lin_lr: 1.0e-3
+
+  # final offline re-rank seeds
+  rerank_lin_seeds: [1042, 2042, 3042]
