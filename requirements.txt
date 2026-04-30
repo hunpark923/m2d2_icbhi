@@ -1,0 +1,15 @@
+# Core deep learning stack
+torch>=2.0.0
+torchaudio>=2.0.0
+numpy>=1.21.0
+
+# Data loading and audio
+tqdm>=4.60.0
+
+# Configuration
+PyYAML>=6.0
+
+# Note:
+# The BEATs library (Microsoft, https://github.com/microsoft/unilm/tree/master/beats)
+# is required as an external dependency. See docs/DATA_SETUP.md for installation
+# instructions.
