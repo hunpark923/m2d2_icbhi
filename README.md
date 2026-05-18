@@ -68,9 +68,20 @@ m2d2-icbhi/
 ## Quick start
 
 ### 1. Install
+Environment Requirements:
+This code was developed and tested with:
+
+OS: Ubuntu 20.04
+
+Python: 3.8.10
+
+PyTorch: 1.13.1
+
+CUDA: 11.7
 
 ```bash
-git clone https://github.com/<your-username>/m2d2-icbhi.git
+# Note: During the double-blind review period, please clone the repository using the anonymous link provided in the paper.
+git clone [Insert Anonymous GitHub Link Here]
 cd m2d2_icbhi
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -136,29 +147,20 @@ After downloading, place the file at `./checkpoints/best_encoder.pt`
 
 ## Citing
 
-If you use this code or the released checkpoint in your research, please
-cite our paper:
-
-```bibtex
-@article{park2026m2d2,
-  title   = {Diffusion-augmented self-supervised learning for respiratory
-             sound classification on the ICBHI benchmark},
-  author  = {Chan Hun Park and Jung Chan Lee},
-  journal = {Biomedical Signal Processing and Control},
-  year    = {2026},
-  note    = {Under review}
-}
-```
+The citation information has been temporarily anonymized for the double-blind peer review process. It will be updated upon acceptance.
 
 We also build on:
 
-* Niizumi et al., *Masked Modeling Duo: Towards a Universal Audio
-  Pre-Training Framework*, IEEE/ACM TASLP 2024.
-* Chen et al., *BEATs: Audio Pre-Training with Acoustic Tokenizers*, ICML
-  2023.
-* The ICBHI 2017 Respiratory Sound Database (Rocha et al.,
-  *Physiol. Meas.* 2019).
-* The FSD50K dataset (Fonseca et al., IEEE/ACM TASLP 2022).
+Niizumi et al., Masked Modeling Duo: Towards a Universal Audio
+Pre-Training Framework, IEEE/ACM TASLP 2024.
+
+Chen et al., BEATs: Audio Pre-Training with Acoustic Tokenizers, ICML
+2023.
+
+The ICBHI 2017 Respiratory Sound Database (Rocha et al.,
+Physiol. Meas. 2019).
+
+The FSD50K dataset (Fonseca et al., IEEE/ACM TASLP 2022).
 
 Please cite these works when appropriate.
 
