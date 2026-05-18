@@ -1,4 +1,4 @@
-# M2D2-ICBHI
+# M2D2_ICBHI
 
 **Diffusion-augmented self-supervised learning for respiratory sound
 classification on the ICBHI 2017 benchmark.**
