@@ -71,7 +71,7 @@ m2d2-icbhi/
 
 ```bash
 git clone https://github.com/<your-username>/m2d2-icbhi.git
-cd m2d2-icbhi
+cd m2d2_icbhi
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
